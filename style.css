@@ -94,5 +94,17 @@ form input:hover {
     border-color: var(--accent-color);
 }
 
+form input:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+div:has(input:focus) > label {
+    background-color: var(--text-color);
+}
+
+
+
+
 
 
