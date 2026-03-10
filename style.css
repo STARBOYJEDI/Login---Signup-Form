@@ -146,7 +146,13 @@ a:hover {
     }
 }
 
+form div.incorrect label {
+    background-color: #f06272;
+}
 
+form div.incorrect input {
+    border-color: #f06272;
+}
 
 
 
