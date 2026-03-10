@@ -12,7 +12,7 @@ form.addEventListener('submit', (e) => {
 
     if (firstname_input) {
         // If we have a firstname input then we are in the signup
-        errors = getSignupFormErrors(firstname_input.ariaValueMax, email_input.ariaValueMax, password_input.value, repeat_password_input.value);
+        errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value);
     }
     else {
         // If we don't have a firstname input then we are in the login
@@ -54,7 +54,7 @@ allInputs.forEach(input => {
     input.addEventListener('input', () => {
         if (input.parentElement.classList.contains('incorrect')) {
             input.parentElement.classList.remove('incorrect');
-            error_message.innerText = '';
+            error_message.innerText = ''
         }
     });
 });
