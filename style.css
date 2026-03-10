@@ -90,7 +90,9 @@ form input {
     transition: 150ms ease;
 }
 
-
+form input:hover {
+    border-color: var(--accent-color);
+}
 
 
 
