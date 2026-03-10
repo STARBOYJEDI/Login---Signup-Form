@@ -118,7 +118,33 @@ form button {
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
+    transition: 150ms ease;
 }
+
+form button:hover {
+    background-color: var(--text-color);
+}
+
+form button:focus {
+    outline: none;
+    background-color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
 
 
 
