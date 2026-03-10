@@ -19,7 +19,14 @@ form.addEventListener('submit', (e) => {
     }
 });
 
+function getSignupFormErrors(firstname, email, password, repeatPassword) {
+    let errors = [];
 
+    if (firstname === '' || firstname == null) {
+        errors.push('Firstname is required');
+        firstname_input.parentElement.classList.add('incorrect');
+    }
+}
 
 
 
