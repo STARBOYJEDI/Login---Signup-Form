@@ -42,7 +42,9 @@ function getSignupFormErrors(firstname, email, password, repeatPassword) {
         password_input.parentElement.classList.add('incorrect');
     }
     if (password !== repeatPassword) {
-        errors.push('Password does not match repeated password')
+        errors.push('Password does not match repeated password');
+        password_input.parentElement.classList.add('incorrect');
+        repeat_password_input.parentElement.classList.add('incorrect');
     }
 
     return errors;
