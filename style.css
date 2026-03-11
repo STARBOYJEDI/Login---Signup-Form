@@ -216,6 +216,35 @@ form div.incorrect input {
     color: #4caf50;
 }
 
+#password-requirements {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+#password-requirements li {
+    padding: 3px 0;
+    transition: color 0.3s ease;
+}
+
+#password-requirements li::before {
+    content: '✗ ';
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#password-requirements li.met {
+    color: #4caf50;
+}
+
+#password-requirements li.met::before {
+    content: '✓ ';
+}
+
+#password-requirements li.unmet {
+    color: #999;
+}
 
 
 
