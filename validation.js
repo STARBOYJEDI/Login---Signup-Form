@@ -4,6 +4,9 @@ const email_input = document.getElementById('email-input');
 const password_input = document.getElementById('password-input');
 const repeat_password_input = document.getElementById('repeat-password-input');
 const error_message = document.getElementById('error-message');
+const password_strength_container = document.getElementById('password-strength-container');
+const password_strength_bar = document.getElementById('password-strength-bar');
+const password_strength_text = document.getElementById('password-strength-text');
 
 function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
