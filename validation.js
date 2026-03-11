@@ -155,6 +155,12 @@ function getSignupFormErrors(firstname, email, password, repeatPassword) {
         password_input.parentElement.classList.add('incorrect');
         repeat_password_input.parentElement.classList.add('incorrect');
     }
+    
+    const strength = calculatePasswordStrength(password);
+    if (strength <= 2) {
+        errors.push('Password is too weak. Please use a stronger password.');
+        password_input.parentElement.classList.add('incorrect');
+    }
 
     return errors;
 }
