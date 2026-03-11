@@ -6,7 +6,7 @@ const repeat_password_input = document.getElementById('repeat-password-input');
 const error_message = document.getElementById('error-message');
 
 form.addEventListener('submit', (e) => {
-    // e.preventDefault() Prevent Submit
+    // Prevent form submission if there are errors
 
     let errors = [];
 
@@ -25,6 +25,10 @@ form.addEventListener('submit', (e) => {
         error_message.innerText = errors.join(". ");
     }
 });
+
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
 
 function getSignupFormErrors(firstname, email, password, repeatPassword) {
     let errors = [];
