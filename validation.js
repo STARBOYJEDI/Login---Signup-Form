@@ -47,6 +47,12 @@ function updatePasswordStrength(password) {
         return;
     }
 
+    updateRequirement('req-length', password.length >= 0);
+    updateRequirement('req-uppercase', /[A-Z]/.test(password));
+    updateRequirement('req-lowercase', /[a-z]/.test(password));
+    updateRequirement('req-number', /[0-9]/.test(password));
+    updateRequirement('req-special', /[^a-zA-Z0-9]/.test(password));
+
     // Remove all strength classes
     password_strength_bar.classList.remove('weak', 'medium', 'strong');
     password_strength_text.classList.remove('weak', 'medium', 'strong');
