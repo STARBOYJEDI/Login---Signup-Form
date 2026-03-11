@@ -8,6 +8,7 @@ const password_strength_container = document.getElementById('password-strength-c
 const password_strength_bar = document.getElementById('password-strength-bar');
 const password_strength_text = document.getElementById('password-strength-text');
 
+// Password strength calculation function
 function calculatePasswordStrength(password) {
     let strength = 0;
 
