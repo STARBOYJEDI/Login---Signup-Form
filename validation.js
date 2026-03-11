@@ -47,7 +47,7 @@ function updatePasswordStrength(password) {
         return;
     }
 
-    updateRequirement('req-length', password.length >= 0);
+    updateRequirement('req-length', password.length >= 8);
     updateRequirement('req-uppercase', /[A-Z]/.test(password));
     updateRequirement('req-lowercase', /[a-z]/.test(password));
     updateRequirement('req-number', /[0-9]/.test(password));
