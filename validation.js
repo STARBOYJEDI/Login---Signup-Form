@@ -5,6 +5,11 @@ const password_input = document.getElementById('password-input');
 const repeat_password_input = document.getElementById('repeat-password-input');
 const error_message = document.getElementById('error-message');
 
+function isValidEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email)
+}
+
 form.addEventListener('submit', (e) => {
     // Prevent form submission if there are errors
 
@@ -64,11 +69,6 @@ function getSignupFormErrors(firstname, email, password, repeatPassword) {
     }
 
     return errors;
-}
-
-function isValidEmail(email) {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailRegex.test(email)
 }
 
 function getLoginFormErrors (email, password) {
