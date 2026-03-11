@@ -45,6 +45,10 @@ function getSignupFormErrors(firstname, email, password, repeatPassword) {
         errors.push('Password must have at least 8 characters');
         password_input.parentElement.classList.add('incorrect');
     }
+    if (password.length > 20) {
+        errors.push('Password must not be longer than 20 characters');
+        password_input.parentElement.classList.add('incorrect');
+    }
     if (password !== repeatPassword) {
         errors.push('Password does not match repeated password');
         password_input.parentElement.classList.add('incorrect');
