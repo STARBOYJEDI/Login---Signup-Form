@@ -67,6 +67,13 @@ function updatePasswordStrength(password) {
     }
 }
 
+// Add event listener to password input 
+if (password_input) {
+    password_input.addEventListener('input', (e) => {
+        updatePasswordStrength(e.target.value);
+    });
+}
+
 function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email)
