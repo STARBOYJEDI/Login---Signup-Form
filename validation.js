@@ -73,6 +73,19 @@ function updatePasswordStrength(password) {
     }
 }
 
+function updateRequirement(elementId, isMet) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        if (isMet) {
+            element.classList.remove('unmet');
+            element.classList.add('met');
+        } else {
+            element.classList.remove('met');
+            element.classList.add('unmet');
+        }
+    }
+}
+
 // Add event listener to password input 
 if (password_input) {
     password_input.addEventListener('input', (e) => {
