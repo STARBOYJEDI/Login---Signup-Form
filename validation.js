@@ -33,6 +33,40 @@ function calculatePasswordStrength(password) {
     return strength;
 }
 
+// Update password strength display
+function updatePasswordStrength(password) {
+    if (!password_strength_container) return; // Only on signup page
+
+    const strength = calculatePasswordStrength(password);
+
+    // Show/hide character
+    if (password.length > 0) {
+        password_strength_container.style.display = 'block';
+    } else {
+        password_strength_container.style.display = 'none';
+        return;
+    }
+
+    // Remove all strength classes
+    password_strength_bar.classList.remove('weak', 'medium', 'strong');
+    password_strength_text.classList.remove('weak', 'medium', 'strong');
+
+    // Add appropriate class based on strength
+    if (strength <= 2) {
+        password_strength_bar.classList.add('weak');
+        password_strength_text.classList.add('weak');
+        password_strength_text.textContent = 'Weak password';
+    } else if (strength <= 4) {
+        password_strength_bar.classList.add('medium');
+        password_strength_text.classList.add('medium');
+        password_strength_text.textContent = 'Medium password';
+    } else {
+        password_strength_bar.classList.add('strong');
+        password_strength_text.classList.add('strong');
+        password_strength_text.textContent = 'Strong password';
+    }
+}
+
 function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email)
