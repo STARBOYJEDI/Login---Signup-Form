@@ -8,6 +8,30 @@ const password_strength_container = document.getElementById('password-strength-c
 const password_strength_bar = document.getElementById('password-strength-bar');
 const password_strength_text = document.getElementById('password-strength-text');
 
+function calculatePasswordStrength(password) {
+    let strength = 0;
+
+    if (!password) return strength;
+
+    // Criteria 1: Length (up to 2 points)
+    if (password.length >= 8) strength += 1;
+    if (password.length >= 12) strength += 1;
+
+    // Criteria 2: Contains lowercase letters
+    if (/[a-z]/.test(password)) strength += 1;
+
+    // Criteria 3: Contains uppercase letters
+    if (/[A-Z]/.test(password)) strength += 1;
+
+    // Criteria 4: Contains numbers 
+    if (/[0-9]/.test(password)) strength += 1;
+
+    // Criteria 5: Contains special characters
+    if (/[^a-zA-Z0-9]/.test(password)) strength += 1;
+
+    return strength;
+}
+
 function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email)
