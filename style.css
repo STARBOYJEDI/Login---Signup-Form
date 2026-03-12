@@ -264,6 +264,19 @@ form div.incorrect input {
     padding-right: 45px;
 }
 
+.toggle-password svg {
+    fill: #8672FF;
+}
 
+.toggle-password:hover {
+    opacity: 0.7;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.toggle-password {
+    position: relative;
+    right: auto;
+    transform: none;
+}
 
 
