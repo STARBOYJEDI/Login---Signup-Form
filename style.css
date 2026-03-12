@@ -10,13 +10,6 @@
         hsl(220, 65%, 55%) 45%,
         hsl(265, 58%, 41%) 100%
     );
-    --gradient-2: linear-gradient(90deg,
-    #00c2db,
-    #00a2ff,
-    #0084ff,
-    #0077ff,
-    #0059ff
-    );
 }
 
 
@@ -85,7 +78,7 @@ form label {
     flex-shrink: 0;
     height: 50px;
     width: 50px;
-    background-color: var(--accent-color);
+    background: var(--gradient);
     fill: var(--base-color);
     color: var(--base-color);
     border-radius: 10px 0 0 10px;
@@ -111,7 +104,7 @@ form input {
 }
 
 form input:hover {
-    border-color: var(--accent-color);
+    border-color: var(--text-color);
 }
 
 form input:focus {
@@ -139,6 +132,7 @@ form button {
     text-transform: uppercase;
     cursor: pointer;
     transition: 150ms ease;👈*/
+    margin-top: 10px;
     border: none;
     border-radius: 1000px;
     padding: .85em 4em;
