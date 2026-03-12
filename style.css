@@ -269,18 +269,22 @@ form .password-container {
 
 .toggle-password {
     position: absolute;
-    right: 15px;
-    top: 50%;
+    right: 10px;
+    top: 33%;
     transform: translateY(-50%);
-    background: none;
+    background: transparent !important;
+    background-color: transparent !important;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: opacity 0.2s ease;
     z-index: 10;
+    outline: none;
+    box-shadow: none;
+    opacity: 0.7;
 }
 
 .password-container input {
@@ -292,14 +296,23 @@ form .password-container {
 }
 
 .toggle-password:hover {
-    opacity: 0.7;
     /*👉transform: translateY(-50%) scale(1.1);👈*/
+    background: transparent !important;
+    box-shadow: none;
 }
 
 .toggle-password:focus {
-    outline: 2px solid var(--accent-color);
+    /*👉outline: 2px solid var(--accent-color);
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 4px;👈*/
+    outline: none;
+    box-shadow: none;
+    background: transparent !important;
+}
+
+.toggle-password:active {
+    background: transparent !important;
+    box-shadow: none;
 }
 
 .toggle-password svg {
