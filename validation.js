@@ -7,6 +7,10 @@ const error_message = document.getElementById('error-message');
 const password_strength_container = document.getElementById('password-strength-container');
 const password_strength_bar = document.getElementById('password-strength-bar');
 const password_strength_text = document.getElementById('password-strength-text');
+const togglePasswordButtons = document.querySelectorAll('.toggle-password');
+
+
+
 
 // Password strength calculation function
 function calculatePasswordStrength(password) {
