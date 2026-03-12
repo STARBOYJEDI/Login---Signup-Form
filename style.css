@@ -4,6 +4,13 @@
     --base-color: white;
     --text-color: #2E2B41;
     --input-color: #F3F0FF;
+
+    --gradient: linear-gradient(
+        160deg,
+        hsl(190, 60%, 58%) 0%,
+        hsl(220, 65%, 55%) 45%,
+        hsl(265, 58%, 41%) 100%,
+    );
 }
 
 * {
@@ -24,6 +31,12 @@ body {
     background-size: cover;
     background-position: right;
     overflow: hidden;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left;}
+    50% {background-position: right;}
+    100% {background-position: left;}
 }
 
 .wrapper {
