@@ -4,14 +4,14 @@
     --base-color: white;
     --text-color: #2E2B41;
     --input-color: #F3F0FF;
-
     --gradient: linear-gradient(
         160deg,
         hsl(190, 60%, 58%) 0%,
         hsl(220, 65%, 55%) 45%,
-        hsl(265, 58%, 41%) 100%,
+        hsl(265, 58%, 41%) 100%
     );
 }
+
 
 * {
     margin: 0;
@@ -27,10 +27,9 @@ html {
 
 body {
     min-height: 100vh;
-    background-image: url(blue-blocks.jpg);
-    background-size: cover;
-    background-position: right;
+    background: var(--gradient);
     overflow: hidden;
+    animation: bg-animation 5s infinite;
 }
 
 @keyframes bg-animation {
