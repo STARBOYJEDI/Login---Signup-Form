@@ -138,6 +138,7 @@ form button:hover {
     background-color: var(--text-color);
 }
 
+
 form button:focus {
     outline: none;
     background-color: var(--text-color);
