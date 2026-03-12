@@ -9,7 +9,26 @@ const password_strength_bar = document.getElementById('password-strength-bar');
 const password_strength_text = document.getElementById('password-strength-text');
 const togglePasswordButtons = document.querySelectorAll('.toggle-password');
 
+togglePasswordButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Find the password input in the same container
+        const passwordContainer = this.parentElement;
+        const passwordInput = passwordContainer.querySelector('input');
+        const eyeIcon = this.querySelector('.eye-icon');
+        const eyeOffIcon = this.querySelector('.eye-off-icon');
 
+        // Toggle between password and text
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';        // Show password
+            eyeIcon.style.display = 'none';
+            eyeOffIcon.style.display = 'block';
+        } else {
+            passwordInput.type = 'password';    // Hide password
+            eyeIcon.style.display = 'block';
+            eyeOffIcon.style.display = 'none';
+        }
+    });
+});
 
 
 // Password strength calculation function
