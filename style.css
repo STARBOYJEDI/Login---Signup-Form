@@ -142,7 +142,15 @@ form button {
     border: none;
     border-radius: 1000px;
     padding: .85em 4em;
-    background: var;
+    background: var(--gradient);
+    background-size: 300%;
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+    background-position: left;
 }
 
 /*👉form button:hover {
